@@ -4,8 +4,8 @@ class Solution {
         for(int i = 0; i < nums.length; i++){
             hashSet.add(nums[i]);
         }
-        int arraylength = nums.length + 1;
-         for(int i = 0; i < arraylength; i++){
+        
+         for(int i = 0; i < nums.length + 1; i++){
             if(!hashSet.contains(i)){
                 return i;
             }
