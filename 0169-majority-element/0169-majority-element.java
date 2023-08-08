@@ -8,7 +8,7 @@ class Solution {
             
         }
         
-        Integer maxValue = 0;
+        int maxValue = 0;
         
         for(Map.Entry<Integer, Integer> entry : map.entrySet()){
             if( entry.getValue() > maxValue){
