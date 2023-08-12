@@ -9,11 +9,11 @@ class Solution {
       char index = words[i].charAt(words[i].length() - 1);
       elements[Integer.parseInt(String.valueOf(index))] = words[i].substring(0, words[i].length() - 1);
     }
-    String full = "";
-    for (int i = 1; i < elements.length; i++) {
-    full = full + elements[i] + " ";
+    StringBuilder builder = new StringBuilder();
+    for (int i = 1; i < elements.length ; i++) {
+      builder.append(elements[i]).append(" ");
     }
-      return full.substring(0, full.length() - 1);
+    return builder.substring(0, builder.toString().length() - 1);
     }
 }
   
