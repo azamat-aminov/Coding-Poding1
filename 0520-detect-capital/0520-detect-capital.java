@@ -1,23 +1,22 @@
 class Solution {
-    public boolean detectCapitalUse(String word) {
-       // min 65
-       // max 90    
-        int upperCaseCounter = 0;
-        int lowerCaseCounter = 0;
-        boolean isStartsWithUpperCase = false;
-        byte[] bytes = word.getBytes();
-        for(int i = 0; i < bytes.length; i++){
-            if(bytes[i] >= 65 && bytes[i] <= 90) {
-                upperCaseCounter = upperCaseCounter + 1;
-            }
-            if(bytes[i] >= 97 && bytes[i] <= 122) {
-                lowerCaseCounter = lowerCaseCounter + 1;
-            }
-            if(bytes[0]>=65 && bytes[0] <=90){
-                isStartsWithUpperCase = true;
-            }
-        }
-        return upperCaseCounter == bytes.length || lowerCaseCounter == bytes.length || 
-            (lowerCaseCounter == bytes.length - 1 && isStartsWithUpperCase);
+  public boolean detectCapitalUse(String word) {
+    int uppercaseCounter = 0;
+    int lowercaseCounter = 0;
+    boolean isStartsWithUppercase = false;
+    byte[] bytes = word.getBytes();
+    for (byte aByte : bytes) {
+      if (aByte >= 65 && aByte <= 90) {
+        uppercaseCounter = uppercaseCounter + 1;
+      }
+      if (aByte >= 97 && aByte <= 122) {
+        lowercaseCounter = lowercaseCounter + 1;
+      }
+      if (bytes[0] >= 65 && bytes[0] <= 90) {
+        isStartsWithUppercase = true;
+      }
     }
+    return uppercaseCounter == bytes.length || //All letters in this word are capitals, like "USA".
+        lowercaseCounter == bytes.length ||    //All letters in this word are not capitals, like "leetcode".
+        (lowercaseCounter == bytes.length - 1 && isStartsWithUppercase); //Only the first letter in this word is capital, like "Google".
+  }
 }
