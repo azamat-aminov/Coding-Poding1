@@ -2,26 +2,16 @@ class Solution {
     public int maxPower(String s) {
         
         char[] letters = s.toCharArray();
-        List<Integer> list = new ArrayList<>();
         int counter = 0;
+        int result = 0;
          for (int i = 0; i < letters.length - 1 ; i++) {
              if(letters[i] == letters[i + 1]){
                  counter = counter + 1;
              }else{
-                 list.add(counter);
+                 result = Math.max(result, counter);
                  counter = 0;
              }
          }
-        list.add(counter);
-        
-        int maxValue = 0;
-        
-        System.out.println(list);
-        for(int element : list){
-            if(element > maxValue){
-                maxValue = element;
-            }
-        }
-        return maxValue + 1;
+        return Math.max(result, counter) + 1;
     }
 }
