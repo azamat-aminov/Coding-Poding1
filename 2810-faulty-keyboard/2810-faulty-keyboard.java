@@ -1,14 +1,14 @@
 class Solution {
     public String finalString(String s) {
         
-        String[] strings = s.split("");
+        char[] chars = s.toCharArray();
         StringBuilder build = new StringBuilder();
         
-        for(int i = 0; i < s.length(); i++){
-            if(strings[i].equals("i")){
+        for(char ch: chars){
+            if(ch == 'i'){
                build.reverse();
             }else{
-                build.append(strings[i]); 
+                build.append(ch); 
             }
         }
         return build.toString();
