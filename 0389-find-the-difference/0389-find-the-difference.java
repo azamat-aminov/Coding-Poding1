@@ -16,7 +16,8 @@ class Solution {
         
         for(int i = 0; i < tChars.length; i++){
             if(sChars[i] == tChars[i]){
-                
+                // do nothin
+                continue;
             }else{
                 result = tChars[i];
             }
