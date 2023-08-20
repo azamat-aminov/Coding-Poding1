@@ -4,14 +4,14 @@ class Solution {
         int max = 0;
         int count = 0;
         
-        for(String ch : s.split("")){
-            if(ch.equals("(")){
+        for(char ch : s.toCharArray()){
+            if(ch =='('){
                 count = count + 1;
                 
                 if(count > max){
                 max = count;
                 }
-            }else if(ch.equals(")")){
+            }else if(ch == ')'){
                 count = count - 1;
             } 
         }
