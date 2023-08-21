@@ -1,37 +1,37 @@
 class Solution {
     public boolean isValid(String s) {
         
-        Deque<String> stack = new ArrayDeque<>();
+        Deque<Character> stack = new ArrayDeque<>();
         
-        for(String ch: s.split("")){
-            if(ch.equals("(") || ch.equals("{") || ch.equals("[")){
+        for(char ch: s.toCharArray()){
+            if(ch == '(' || ch == '{' || ch == '['){
              stack.push(ch);
             }
+            
             if(stack.isEmpty()){
                 return false;
             }
             
-            String currentChar;
+            char currentChar;
             
             switch(ch){
-                case ")" :
+                case ')' :
                   currentChar = stack.pop();
-                    if(currentChar.equals("{") || currentChar.equals("["))
+                    if(currentChar == '{' || currentChar == '[')
                         return false;
                     break;
-                case "}" :
+                case '}' :
                   currentChar = stack.pop();
-                    if(currentChar.equals("(") || currentChar.equals("["))
+                    if(currentChar == '(' || currentChar == '[')
                         return false;
                     break;
-                case "]" :
+                case ']' :
                   currentChar = stack.pop();
-                    if(currentChar.equals("{") || currentChar.equals("("))
+                    if(currentChar == '{' || currentChar == '(')
                         return false;
                     break;
             }
         }
-        System.out.println(stack);
         return stack.isEmpty();
     }
 }
