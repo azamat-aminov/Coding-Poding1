@@ -31,6 +31,7 @@ class Solution {
                     break;
             }
         }
+        System.out.println(stack);
         return stack.isEmpty();
     }
 }
