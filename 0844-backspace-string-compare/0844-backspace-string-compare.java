@@ -8,21 +8,21 @@ class Solution {
         char[] second = t.toCharArray();
         
         for(int i = 0; i < first.length; i++){
-            if(first[i] == '#'){
-                if(!firstStack.isEmpty()){
+            if(first[i] == '#' && !firstStack.isEmpty()){
                     firstStack.pop();
-                }
             }else{
-                firstStack.push(first[i]);   
+                if(first[i] != '#'){
+                    firstStack.push(first[i]);
+                }   
             }
         }
         for(int k = 0; k < second.length; k++){
-            if(second[k] == '#'){
-                if(!secondStack.isEmpty()){
+            if(second[k] == '#' && !secondStack.isEmpty()){
                     secondStack.pop();
-                }
             }else{
-                secondStack.push(second[k]);   
+                if(second[k] != '#'){
+                    secondStack.push(second[k]);   
+                }   
             }
         }
         
