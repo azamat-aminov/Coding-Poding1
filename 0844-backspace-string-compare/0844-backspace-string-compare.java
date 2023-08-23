@@ -4,27 +4,25 @@ class Solution {
         Stack<Character> firstStack = new Stack<>();
         Stack<Character> secondStack = new Stack<>();
         
-        // char[] first = s.toCharArray();
-        // char[] second = t.toCharArray();
+        char[] first = s.toCharArray();
+        char[] second = t.toCharArray();
         
-        for(int i = 0; i < s.length(); i++){
-            char ch = s.charAt(i);
-            if(ch == '#' && !firstStack.isEmpty()){
+        for(int i = 0; i < first.length; i++){
+            if(first[i] == '#'){
+                if(!firstStack.isEmpty()){
                     firstStack.pop();
+                }
             }else{
-                if(ch != '#'){
-                    firstStack.push(ch);
-                }   
+                firstStack.push(first[i]);   
             }
         }
-        for(int k = 0; k < t.length(); k++){
-            char ch = t.charAt(k);
-            if(ch == '#' && !secondStack.isEmpty()){
+        for(int k = 0; k < second.length; k++){
+            if(second[k] == '#'){
+                if(!secondStack.isEmpty()){
                     secondStack.pop();
+                }
             }else{
-                if(ch != '#'){
-                    secondStack.push(ch);   
-                }   
+                secondStack.push(second[k]);   
             }
         }
         
@@ -41,7 +39,6 @@ class Solution {
 //             // tSecond = tSecond + String.valueOf(secondStack.pop());
 //             tSecond.append(String.valueOf(secondStack.pop()));
 //         }
-        
         return firstStack.equals(secondStack);
         // return sFirst.toString().equals(tSecond.toString());
     }
