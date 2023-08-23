@@ -4,24 +4,26 @@ class Solution {
         Stack<Character> firstStack = new Stack<>();
         Stack<Character> secondStack = new Stack<>();
         
-        char[] first = s.toCharArray();
-        char[] second = t.toCharArray();
+        // char[] first = s.toCharArray();
+        // char[] second = t.toCharArray();
         
-        for(int i = 0; i < first.length; i++){
-            if(first[i] == '#' && !firstStack.isEmpty()){
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            if(ch == '#' && !firstStack.isEmpty()){
                     firstStack.pop();
             }else{
-                if(first[i] != '#'){
-                    firstStack.push(first[i]);
+                if(ch != '#'){
+                    firstStack.push(ch);
                 }   
             }
         }
-        for(int k = 0; k < second.length; k++){
-            if(second[k] == '#' && !secondStack.isEmpty()){
+        for(int k = 0; k < t.length(); k++){
+            char ch = t.charAt(k);
+            if(ch == '#' && !secondStack.isEmpty()){
                     secondStack.pop();
             }else{
-                if(second[k] != '#'){
-                    secondStack.push(second[k]);   
+                if(ch != '#'){
+                    secondStack.push(ch);   
                 }   
             }
         }
