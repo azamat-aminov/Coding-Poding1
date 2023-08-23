@@ -26,18 +26,20 @@ class Solution {
             }
         }
         
-        String sFirst = "";
+        StringBuilder sFirst = new StringBuilder();
         
         while(!firstStack.isEmpty()){
-            sFirst = sFirst + String.valueOf(firstStack.pop());
+            // sFirst = sFirst + String.valueOf(firstStack.pop());
+            sFirst.append(String.valueOf(firstStack.pop()));
         }
         
-         String tSecond = "";
+         StringBuilder tSecond = new StringBuilder();
         
         while(!secondStack.isEmpty()){
-            tSecond = tSecond + String.valueOf(secondStack.pop());
+            // tSecond = tSecond + String.valueOf(secondStack.pop());
+            tSecond.append(String.valueOf(secondStack.pop()));
         }
         
-        return sFirst.equals(tSecond);
+        return sFirst.toString().equals(tSecond.toString());
     }
 }
