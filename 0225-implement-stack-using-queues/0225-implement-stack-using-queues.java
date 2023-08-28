@@ -13,7 +13,6 @@ class MyStack {
     
     public int pop() {
         int item = a[--N];
-        // a[N] = null;
         return item;
     }
     
