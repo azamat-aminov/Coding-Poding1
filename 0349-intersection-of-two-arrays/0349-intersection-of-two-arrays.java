@@ -1,38 +1,26 @@
 class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
-        
-//     Set<Integer> set = new HashSet<>();
-        
-//     for (int i = 0; i < nums1.length ; i++) {
-//             for (int j = 0; j < nums2.length; j++) {
-//                 if(nums1[i] == nums2[j]){
-//                     set.add(nums2[j]);
-//                 }
-//             }
-//         }
-        
-//       return set.stream().mapToInt(Integer::intValue).toArray();
-    
-        Set<Integer> sets1 = new HashSet<>();
-        
-        Set<Integer> sets2 = new HashSet<>();
-        
-        List<Integer> list = new ArrayList<>();
-        
-        for (int i = 0; i < nums1.length ; i++) {
-            sets1.add(nums1[i]);
+        Set<Integer> set1 = new HashSet<>();
+        for (int i : nums1) {
+            set1.add(i);
         }
-        
-        for (int i = 0; i < nums2.length; i++) {
-            sets2.add(nums2[i]);
+        Set<Integer> set2 = new HashSet<>();
+        for (int i : nums2) {
+            set2.add(i);
         }
-        
-
-        for (Integer i : sets1) {
-            if (sets2.contains(i)) {
-                list.add(i);
+        //Removed Duplicates using Hashset
+        Set<Integer> Main_Set = new HashSet<>();
+        for (Integer var : set1) {
+            if (set2.contains(var)) {
+                Main_Set.add(var);
             }
         }
-        return list.stream().mapToInt(i -> i).toArray();
+        int[] arr = new int[Main_Set.size()];
+        int j = 0;
+        for (Integer val : Main_Set) {
+            arr[j] = val.intValue();
+            j++;
+        }
+        return arr;
     }
 }
