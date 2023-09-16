@@ -25,8 +25,8 @@ class Solution {
 
         int[] result = new int[list.size()];
         int index = 0;
-        for (Integer element : list) {
-            result[index] = element;
+        while (index < list.size()) {
+            result[index] = list.get(index);
             index = index + 1;
         }
         return result; 
