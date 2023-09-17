@@ -13,7 +13,7 @@ class Solution {
         
         int counter = 0;
         
-         for(int i = 0; i < heights.length; i++){
+         for(int i = 0; i < temp.length; i++){
             if(temp[i] != heights[i]){
                 counter++;
             }
