@@ -11,6 +11,7 @@ class Solution {
                 odds.add(nums[i]);
             }
         }
+
         evens.addAll(odds);
         
         int[] result = new int[evens.size()];
