@@ -11,10 +11,10 @@ class Solution {
                 count = count + 1;
             }
         }
+        
         if(count == arr.length - 1){
             return true;
         }
         return false;
-//         1 3 5
     }
 }
