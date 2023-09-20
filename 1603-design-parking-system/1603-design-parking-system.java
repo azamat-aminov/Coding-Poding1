@@ -13,18 +13,18 @@ class ParkingSystem {
     public boolean addCar(int carType) {
         
         if(carType == 1){
-            if(this.big > 0){
-                this.big--;
+            if(big > 0){
+                big--;
                 return true;
             }
         } else if(carType == 2){
-            if(this.medium > 0){
-                this.medium--;
+            if(medium > 0){
+                medium--;
                 return true;
             }
         }else if(carType == 3){
-            if(this.small > 0){
-                this.small--;
+            if(small > 0){
+                small--;
                 return true;
             }
         }
