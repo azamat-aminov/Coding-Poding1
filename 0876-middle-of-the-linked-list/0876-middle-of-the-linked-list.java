@@ -18,11 +18,11 @@ class Solution {
            counter++; 
         }
         
-        ListNode current = head;
+        // ListNode current = head;
         
         for(int i = 0; i < counter/2; i++){
-            current = current.next;
+            head = head.next;
         }
-       return current; 
+       return head; 
     }
 }
