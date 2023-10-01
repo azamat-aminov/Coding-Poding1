@@ -9,14 +9,11 @@ class Solution {
 //             0,1,2,3,4,5
             int min = nums[lo];
             int max = nums[hi];
-             System.out.println(min);
-             System.out.println(max);
             float value = ((float) min + (float) max) / 2;
             set.add(value);
             lo++;
             hi--;
         }
-        // System.out.println(set);
         return set.size();
     }
 }
