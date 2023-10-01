@@ -6,7 +6,6 @@ class Solution {
         int lo = 0;
         int hi = nums.length - 1;
         while(lo < hi){
-//             0,1,2,3,4,5
             int min = nums[lo];
             int max = nums[hi];
             float value = ((float) min + (float) max) / 2;
