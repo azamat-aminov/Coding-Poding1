@@ -9,8 +9,7 @@ class Solution {
                     counter++;
                 }
             }
-        }
-        
+        }        
         return counter;
     }
 }
