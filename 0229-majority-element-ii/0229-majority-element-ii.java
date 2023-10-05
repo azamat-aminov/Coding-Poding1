@@ -1,7 +1,6 @@
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
         
-        System.out.println(nums.length/3);
         
         Map<Integer, Integer> map = new HashMap<>();
         
@@ -9,7 +8,6 @@ class Solution {
             map.merge(e, 1, Integer::sum);
         }
         
-        System.out.println(map);
         
         List<Integer> result = new ArrayList<>();
         
