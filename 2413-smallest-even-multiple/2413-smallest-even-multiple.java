@@ -5,7 +5,7 @@ class Solution {
         
         for(int i = 2; i <= 10000; i++){
             if(i % n == 0 && i % 2 == 0){
-                result =i;
+                result = i;
                 break;
             }
         }
