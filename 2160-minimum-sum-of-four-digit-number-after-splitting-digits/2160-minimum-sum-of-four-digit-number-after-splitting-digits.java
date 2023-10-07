@@ -9,6 +9,7 @@ class Solution {
             num = num / 10;
             index++;
         }
+        
         Arrays.sort(digits);
 
         int first = digits[0] * 10 + digits[2];
