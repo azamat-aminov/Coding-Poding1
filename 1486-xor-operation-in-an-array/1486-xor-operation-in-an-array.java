@@ -10,8 +10,6 @@ class Solution {
             result ^= array[i];
         }
         
-        System.out.println(Arrays.toString(array));
-        
         return result;
     }
 }
