@@ -1,9 +1,9 @@
 class Solution {
     public List<String> fizzBuzz(int n) {
         
-        int i = 1;
-        
         List<String> list = new ArrayList<>();
+        
+        int i = 1;
         
         while(i <= n) {
             if(i % 3 == 0 && i % 5 == 0) {
