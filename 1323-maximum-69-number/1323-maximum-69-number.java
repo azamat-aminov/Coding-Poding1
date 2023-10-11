@@ -8,11 +8,7 @@ class Solution {
                 digits[i] = '9';
                 break;
             }
-        }
-        // System.out.println();
-        
-        
-        
+        }           
         return Integer.parseInt(String.valueOf(digits));
     }
 }
