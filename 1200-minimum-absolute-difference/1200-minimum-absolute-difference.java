@@ -3,7 +3,7 @@ class Solution {
         
         Arrays.sort(arr);
         
-        int min = Math.abs(arr[1] - arr[0]);
+        int min = Integer.MAX_VALUE;
         
         List<List<Integer>> result = new ArrayList<>();
         
