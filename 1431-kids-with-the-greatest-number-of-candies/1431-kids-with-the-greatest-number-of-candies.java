@@ -11,17 +11,8 @@ class Solution {
                      max = candies[j];
                  }
             }
-            System.out.println(max);
-             if(current >= max) {
-                     result.add(true);
-                 // max = 0;
-                 }else{
-                     result.add(false);
-                 // max = 0;
-                 }
+             result.add(current >= max);
         }
-        
-        System.out.println(result);
         
         return result;
     }
