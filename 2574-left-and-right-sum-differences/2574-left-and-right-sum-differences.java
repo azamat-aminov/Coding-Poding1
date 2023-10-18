@@ -22,15 +22,12 @@ class Solution {
             }
             rightSum[i] = sum;
             sum = 0;
-        }
-        System.out.println(Arrays.toString(leftSum));
-        System.out.println(Arrays.toString(rightSum));
+        }  
         
         for(int i = 0; i < nums.length; i++) {
             nums[i] = Math.abs(leftSum[i] - rightSum[i]);
         }
-         System.out.println(Arrays.toString(nums));
-        // return new int[]{};
+        
         return nums;
     }
 }
