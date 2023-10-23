@@ -3,7 +3,6 @@ class Solution {
         if(n > 1) {
             while(n % 4 == 0) {
                 n = n / 4;
-                System.out.println(n);
             }
         }
         return n == 1;
