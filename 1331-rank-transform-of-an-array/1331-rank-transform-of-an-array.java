@@ -10,8 +10,7 @@ class Solution {
         Map<Integer, Integer> map = new TreeMap<>();
         int rank = 1;
         for(int e : hold) {
-            map.put(e, rank);
-            rank++;
+            map.put(e, rank++);
         }
         
         System.out.println(map);
