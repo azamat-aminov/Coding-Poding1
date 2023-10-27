@@ -12,14 +12,11 @@ class Solution {
         for(int e : hold) {
             map.put(e, rank++);
         }
-        
-        System.out.println(map);
+
         int[] result = new int[arr.length];
         
-        int index = 0;
-        for(int e : arr) {
-            result[index] = map.get(e);
-            index++;
+        for(int i = 0; i < arr.length; i++) {
+            result[i] = map.get(arr[i]);
         }
         
         return result;
