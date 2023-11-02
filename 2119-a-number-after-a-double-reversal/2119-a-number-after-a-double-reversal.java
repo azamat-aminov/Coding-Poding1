@@ -3,9 +3,7 @@ class Solution {
 
         int reversed1 = getReversed(num);
 
-        int reversed2 = getReversed(reversed1);
-
-        return reversed2 == num;
+        return getReversed(reversed1) == num;
     }
     
     private int getReversed(int number) {
