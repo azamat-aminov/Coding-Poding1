@@ -10,11 +10,7 @@ class Solution {
             
             while(number > 0) {
                 int digit = number % 10;
-                if(digit == 0) {
-                    isSelfDividing = false;
-                    break;
-                }
-                if(num % digit != 0) {
+                if(digit == 0 || num % digit != 0) {
                     isSelfDividing = false;
                     break;
                 } 
